@@ -3,47 +3,81 @@
 const products = [
     {
         id: 1,
-        name: "Cadeira de Escritório Minimalista",
-        price: 599.99,
-        image: "image/Cadeira de Escritório Minimalista.avif"
+        name: "Base Cover Up Mari Maria",
+        price: 55.90,
+        image: "image/Base Cover Up Mari Maria.webp"
     },
     {
         id: 2,
-        name: "Mesa de Centro Moderna",
-        price: 349.99,
-        image: "image/mesa.webp"
+        name: "Boticário Óleo Hidratante Nativa 300ml",
+        price: 85.45,
+        image: "image/Boticário Óleo Hidratante Nativa 300ml.webp"
     },
     {
         id: 3,
-        name: "Luminária de Mesa Elegante",
-        price: 129.99,
-        image: "image/Luminária de Mesa Elegante.avif"
+        name: "Carolina Herrera Good Girl Eau de Parfum",
+        price: 649.99,
+        image: "image/Carolina Herrera Good Girl Eau de Parfum.webp"
     },
     {
         id: 4,
-        name: "Vaso Decorativo Cerâmica",
-        price: 79.99,
-        image: "image/Vaso Decorativo Cerâmica.avif"
+        name: "Creme Acetinado Hidratante Desodorante Corporal Lily Lumière 250g",
+        price: 118.45,
+        image: "image/Creme Acetinado Hidratante Desodorante Corporal Lily Lumière 250g.webp"
     },
     {
         id: 5,
-        name: "Conjunto de Canetas Premium",
-        price: 45.99,
-        image: "image/Conjunto de Canetas Premium.avif"
+        name: "Creme Ácido Glicólico Creamy 30g",
+        price: 78.84,
+        image: "image/Creamy Ácido Glicólico 30g.webp"
     },
     {
         id: 6,
-        name: "Caderno de Notas Capa Dura",
-        price: 29.99,
-        image: "image/Caderno de Notas Capa Dura.avif"
+        name: "Dove Óleo de Banho 240ml",
+        price: 39.90,
+        image: "image/Dove Óleo de Banho 240ml.jpg"
     },
     {
         id: 7,
-        name: "Sofá Vintage verde musgo",
-        price: 799.99,
-        image: "image/Mesa de Centro Moderna.avif"
+        name: "Gel de Limpeza Facial Garnier Uniform e Matte Vitamina C 150g",
+        price: 23.19,
+        image: "image/Gel de Limpeza Facial Garnier Uniform e Matte Vitamina C 150g.webp"
     },
+    {
+        id: 8,
+        name: "Gloss Fran By Franciny Ehlke Liphoney",
+        price: 62.90,
+        image: "image/Gloss Fran By Franciny Ehlke Liphoney.jpg"
+    },
+    {
+        id: 9,
+        name: "Labotrat Esfoliante Corporal.webp",
+        price: 26.76,
+        image: "image/Labotrat Esfoliante Corporal.webp"
+    },
+    {
+        id: 10,
+        name: "Principia Sérum Mix-02 30ml",
+        price: 60.95,
+        image: "image/Principia Sérum Mix-02 30ml.webp"
+    },
+    {
+        id: 11,
+        name: "Chantilly de Banho Sabonete Líquido",
+        price: 69.90,
+        image: "image/Chantilly de Banho Sabonete Líquido.webp"
+    },
+    {
+        id: 12,
+        name: "Protetor Solar Sallve Bastão Fps 90",
+        price: 84.90,
+        image: "image/Protetor Solar Sallve Bastão Fps 90.webp"
+    },
+    
+
 ];
+   
+
 
 // Estado do carrinho
 let cart = [];
