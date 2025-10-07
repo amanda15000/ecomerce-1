@@ -76,7 +76,6 @@ const products = [
     
 
 ];
-   
 
 
 // Estado do carrinho
