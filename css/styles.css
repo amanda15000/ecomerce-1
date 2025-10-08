@@ -4,40 +4,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte mais moderna para complementar o visual */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333333;
+    /* Fundo bem clarinho para o roxo se destacar */
+    background-color: #F3E5F5; 
+    color: #4A148C; /* Texto escuro roxo */
     line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra suave e um pouco de rosa */
+    box-shadow: 0 2px 10px rgba(156, 39, 176, 0.1); 
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
 }
- table{
-    margin:0 auto;
-  /*width: 100;*/
-  border-collapse: collapse;
- }
- tr,td{
-    border:1px solid #34d0db;
-    text-align: left;
-    padding: 8px;
- }
- tr:nth-last-child(even){
-    background-color: #29b9b2;
- }
-  
 
- 
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -49,11 +37,11 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #0d0d0e;
+    color: #4A148C; /* Roxo escuro */
 }
 
 .logo span {
-    color: #34dbb7;
+    color: #E91E63; /* Rosa de destaque */
 }
 
 nav ul {
@@ -67,13 +55,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: #673AB7; /* Roxo Principal */
     font-weight: 500;
     transition: color 0.3s;
+    padding: 5px 0; /* Adiciona padding para área de clique */
 }
 
 nav ul li a:hover {
-    color: #34dba3;
+    color: #9C27B0; /* Roxo Secundário */
+    border-bottom: 2px solid #E91E63; /* Adiciona um toque de rosa no hover */
 }
 
 .cart-icon {
@@ -85,7 +75,7 @@ nav ul li a:hover {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #e74c3c;
+    background-color: #E91E63; /* Rosa para o contador */
     color: white;
     border-radius: 50%;
     width: 18px;
@@ -98,14 +88,16 @@ nav ul li a:hover {
 
 /* Banner principal */
 .hero {
-    background-color: #34db9b;
+    background-image: #673AB7; /* Roxo Principal */
     color: white;
     padding: 4rem 2rem;
     text-align: center;
+    /* Sombra sutil para dar profundidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Um pouco maior */
     margin-bottom: 1rem;
 }
 
@@ -117,18 +109,21 @@ nav ul li a:hover {
 
 .btn {
     display: inline-block;
-    background-color: #fff;
-    color: #34dbdb;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
+    background-color: #E91E63; /* Rosa de destaque */
+    color: white;
+    padding: 0.8rem 1.8rem; /* Um pouco mais largo */
+    border-radius: 50px; /* Borda arredondada (pill shape) */
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    border: 2px solid #E91E63; /* Borda para contraste */
 }
 
 .btn:hover {
-    background-color: #f1f1f1;
-    transform: translateY(-2px);
+    background-color: #9C27B0; /* Roxo no hover */
+    border-color: #9C27B0;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Seção de produtos */
@@ -140,33 +135,54 @@ nav ul li a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #2c3e50;
+    margin-bottom: 3rem; /* Mais espaço abaixo do título */
+    font-size: 2.2rem;
+    color: #4A148C; /* Roxo escuro */
+    border-bottom: 3px solid #9C27B0; /* Detalhe sublinhado roxo */
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 .products-grid {
+    /* Mantém o grid para telas maiores */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
 .product-card {
-    background-color: rgb(251, 254, 255);
-    border-radius: 8px;
+    background-color: white;
+    border-radius: 12px; /* Mais arredondado */
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Sombra mais pronunciada e roxinha */
+    box-shadow: 0 8px 20px rgba(103, 58, 183, 0.1); 
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #efe3f8; /* Borda suave */
 }
 
+#cadastro input[type="text"],
+#cadastro input[type="email"],
+#cadastro input[type="telefone"],
+#cadastro input[type="senha"],
+#cadastro input[type="cep"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #3c26b8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFF3E0;
+    color: #420c50;
+}
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px); /* Mais destaque no hover */
+    box-shadow: 0 15px 30px rgba(156, 39, 176, 0.2); /* Sombra mais roxa e forte */
 }
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 220px; /* Um pouco mais alto */
     object-fit: cover;
 }
 
@@ -175,43 +191,79 @@ nav ul li a:hover {
 }
 
 .product-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #2c3e50;
+    color: #4A148C;
 }
 
 .product-price {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #34dbb7;
+    color: #E91E63; /* Preço em rosa */
     margin-bottom: 1rem;
 }
 
 .add-to-cart {
     width: 100%;
-    padding: 0.7rem;
-    background-color: #34d5db;
+    padding: 0.9rem;
+    background-color: #9C27B0; /* Roxo para o botão */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .add-to-cart:hover {
-    background-color: #29b9b2;
+    background-color: #673AB7; /* Roxo Principal no hover */
 }
 
-/* Carrinho lateral */
+/* Tabelas (Ajustadas para Roxo/Rosa) */
+table{
+    margin: 2rem auto;
+    /* Ajuste o width se precisar, mas é melhor deixar responsivo */
+    max-width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(103, 58, 183, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+ tr,td{
+    border: 1px solid #9C27B0; /* Borda roxa mais visível */
+    text-align: left;
+    padding: 12px;
+ }
+ tr:nth-child(even){
+    background-color: #F8E8FB; /* Rosa bem clarinho para linhas pares */
+ }
+ tr:nth-child(odd){
+    background-color: #fff; /* Fundo branco para linhas ímpares */
+ }
+ tr:hover {
+     background-color: #E1BEE7; /* Roxo claro no hover */
+ }
+ /* Estilo para o cabeçalho da tabela, se houver <th> */
+ th {
+     background-color: #673AB7;
+     color: white;
+     padding: 12px;
+     text-align: left;
+ }
+
+
+/* Carrinho lateral (Sidebar) */
 .cart-sidebar {
+    /* ... (manter as propriedades de posição e transição) */
     position: fixed;
     top: 0;
     right: -400px;
     width: 350px;
     height: 100vh;
     background-color: white;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0 15px rgba(103, 58, 183, 0.3); /* Sombra roxa */
     padding: 2rem;
     transition: right 0.3s ease;
     z-index: 1000;
@@ -223,74 +275,26 @@ nav ul li a:hover {
 }
 
 .cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    /* ... */
+    border-bottom: 2px solid #9C27B0; /* Borda roxa */
 }
 
 .close-cart {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #555;
-}
-
-.cart-items {
-    margin-bottom: 2rem;
-}
-
-.cart-item {
-    display: flex;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-}
-
-.cart-item-image {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 1rem;
-}
-
-.cart-item-details {
-    flex: 1;
-}
-
-.cart-item-title {
-    font-weight: 600;
-    margin-bottom: 0.3rem;
+    color: #4A148C;
 }
 
 .cart-item-price {
-    color: #34d0db;
-    font-weight: 600;
+    color: #E91E63; /* Rosa para o preço do item */
 }
 
 .cart-item-remove {
-    background: none;
-    border: none;
-    color: #e74c3c;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.cart-total {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: right;
-    margin-bottom: 1.5rem;
+    color: #D32F2F; /* Vermelho padrão para remover */
 }
 
 .checkout-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #2ecc71;
+    background-color: #E91E63; /* Rosa para o botão de checkout */
     color: white;
     border: none;
     border-radius: 4px;
@@ -300,57 +304,33 @@ nav ul li a:hover {
 }
 
 .checkout-btn:hover {
-    background-color: #27ae60;
-}
-
-/* Overlay para o carrinho */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
-.overlay.active {
-    display: block;
+    background-color: #D81B60; /* Rosa mais escuro no hover */
 }
 
 /* Rodapé */
 footer {
-    background-color: #2c3e50;
+    background-color: #4A148C; /* Roxo Escuro */
     color: white;
     padding: 3rem 2rem;
     text-align: center;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 0;
-}
-
 .footer-links a {
-    color: white;
+    color: #F3E5F5;
     margin: 0 1rem;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
-    color: #e74c3c;
+    color: #E91E63; /* Rosa no hover */
 }
 
-/* Responsividade */
+/* Responsividade (Aqui garantimos o "um embaixo do outro" para celular) */
 @media (max-width: 768px) {
+    
+    /* Configuração geral para empilhar */
     .header-container {
         flex-direction: column;
         gap: 1rem;
@@ -358,10 +338,23 @@ footer {
 
     nav ul {
         margin-top: 1rem;
+        /* Centraliza a navegação */
+        justify-content: center;
+    }
+    
+    /* Na tela pequena, a grid de produtos se torna uma única coluna */
+    .products-grid {
+        grid-template-columns: 1fr; /* Coloca um item embaixo do outro */
     }
 
     .cart-sidebar {
-        width: 300px;
+        width: 100%; /* Ocupa a tela inteira lateralmente em telas pequenas */
+        right: -100%;
+        max-width: none;
+    }
+
+    .cart-sidebar.active {
+        right: 0;
     }
 
     .hero h1 {
@@ -370,7 +363,5 @@ footer {
 
     .hero p {
         font-size: 1rem;
-      
     }
 }
-     

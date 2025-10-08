@@ -73,9 +73,60 @@ const products = [
         price: 84.90,
         image: "image/Protetor Solar Sallve Bastão Fps 90.webp"
     },
-    
-
 ];
+    var campoCep = document.getElementById('cep');
+    function buscarCep(){
+    const campoCep = document.getElementById('cep');
+    let valorCep = campoCep.value.replace(/\D/g, '');
+    if(valorCep.length!==8){
+        limparCamposEndereco();
+        return
+    }
+    const url = `https://viacep.com.br/ws/${valorCep}/json/`;
+    fetch (url)
+    .then(response => response.json())
+    .then(data => {
+        if (data.erro) {
+            alert("CEP inválido/não encontrado. Por favor, verifique.");
+            limparCamposEndereco();
+            campoCep.style.border = "2px solid red";
+            return;
+        }
+        document.getElementById('logradouro').value = data.logradouro || '';
+        document.getElementById('bairro').value = data.bairro || '';
+        document.getElementById('cidade').value = data.localidade || '';
+        document.getElementById('estado').value = data.uf || '';
+        campoCep.value = data.cep;
+        campoCep.style.border = "2px solid green";
+    })
+    .catch(error => {
+        alert("Erro ao buscar CEP. Tente novamente mais tarde.");
+            limparCamposEndereco();
+            campoCep.style.border = "2px solid red";
+        });
+        }
+    function limparCamposEndereco() {
+        document.getElementById('logradouro').value = '';
+        document.getElementById('bairro').value = '';
+        document.getElementById('cidade').value = '';
+        document.getElementById('estado').value = '';
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const campoCep = document.getElementById('cep');
+            if (campoCep) {
+                campoCep.addEventListener('blur', buscarCep);
+        }
+        const form = document.querySelector('form');
+            if (form) {
+        form.addEventListener('submit', (event) => {
+            const campoLogradouro = document.getElementById('logradouro');
+            if (!campoLogradouro.value) {
+                event.preventDefault();
+                alert('Por favor, digite um CEP válido e aguarde o preenchimento do endereço.');
+                }
+            });
+        }
+    });
 
 
 // Estado do carrinho
@@ -240,4 +291,8 @@ closeCart.addEventListener('click', () => {
 overlay.addEventListener('click', () => {
     cartSidebar.classList.remove('active');
     overlay.classList.remove('active');
+
+
+    
+    
 });
